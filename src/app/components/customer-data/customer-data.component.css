@@ -1,0 +1,8 @@
+.example-header-image {
+  background-image: url('https://image.shutterstock.com/image-vector/silhouette-people-unknown-male-person-260nw-1372192277.jpg');
+  background-size: cover;
+}
+img {
+  width: 332px;
+  height: 245px;
+}

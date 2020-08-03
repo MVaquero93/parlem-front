@@ -1,1 +1,16 @@
-<p>customer-data works!</p>
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{customer.givenName}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="https://image.shutterstock.com/image-vector/silhouette-people-unknown-male-person-260nw-1372192277.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <ul>
+      <li>Name: {{customer.givenName}}</li>
+      <li>Document Type: {{customer.docType}}</li>
+      <li>Document: {{customer.docNum}}</li>
+      <li>Email: {{customer.email}}</li>
+      <li>Phone: {{customer.phone}}</li>
+    </ul>
+  </mat-card-content>
+</mat-card>

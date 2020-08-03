@@ -1,1 +1,25 @@
-<p>product-list works!</p>
+<h2 style="margin-top:20px">Product list:</h2>
+<table mat-table [dataSource]="customer?.subscribedProducts" class="mat-elevation-z8">
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.productName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="type">
+    <th mat-header-cell *matHeaderCellDef> Type </th>
+    <td mat-cell *matCellDef="let element"> {{element.productTypeName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="terminal">
+    <th mat-header-cell *matHeaderCellDef> Terminal </th>
+    <td mat-cell *matCellDef="let element"> {{element.numeracioTerminal}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="soldAt">
+    <th mat-header-cell *matHeaderCellDef> SoldAt </th>
+    <td mat-cell *matCellDef="let element"> {{element.soldAt}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
